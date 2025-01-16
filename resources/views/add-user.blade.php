@@ -1,5 +1,5 @@
 <div>
-    <form action="user-info" method="post">
+    <form action="add-user-confirmation" method="post">
         @csrf
         <!-- {{URL::current()}} -->
          <!-- {{url()->current()}} <br>
@@ -7,9 +7,9 @@
          {{url()->previous()}} <br>
          {{url()->full()}} -->
         <h2>Add new user</h2>
-        <Label>User Name: </Label><input class="input-widget" type="text" name="userName" id="userName"> <br>
-        <Label>User Email: </Label><input class="input-widget" type="text" name="userEmail" id="userEmail"><br>
-        <Label>User Password: </Label><input class="input-widget" type="password" name="userPassword" id="userPassword"><br>
+        <Label>User Name: </Label><input class="input-widget" type="text" name="newUserName" id="userName"> <br>
+        <Label>User Email: </Label><input class="input-widget" type="text" name="newUserEmail" id="userEmail"><br>
+        <Label>User Password: </Label><input class="input-widget" type="password" name="newUserPassword" id="userPassword"><br>
         <button type="submit" name="addUser">Add New User</button>
     </form>
 </div>

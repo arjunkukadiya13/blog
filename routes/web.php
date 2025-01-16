@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view("add-user","add-user");
+// Route::view("add-user","add-user");
 Route::post("user-info",[UserController::class,"getUser"]);
 Route::view("about/{name}","about"); // take name also or without name also ex /about or /about/arjun etc
 Route::view("profiles/arjun/photo","about")->name("pup");
@@ -20,6 +20,8 @@ Route::prefix("user")->group(function (){
     Route::view("/about","about");
     Route::post("/auth",[UserController::class,"loginUser"]);
     Route::get("/user-list",[UserController::class,"getUsersList"]);
+    Route::view("/add-user","add-user");
+    Route::post("/add-user-confirmation",[UserController::class,"addUser"]);
 });
 
 // Route group with Controller

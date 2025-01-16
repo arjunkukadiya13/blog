@@ -1,11 +1,11 @@
 <div>
     <title>Confirmation</title>
-    <form action="" method="post">
+    <form action="user-list" method="get">
     @if ($msg === 'success')
-        @include('components.popupmessage', ['message' => 'Login successfully', 'class' => 'success'])
+        @include('components.popupmessage', ['message' => $message, 'class' => 'success'])
         <button type="submit">User List</button>
     @elseif ($msg === 'error')
-        @include('components.popupmessage', ['message' => 'Error occurred', 'class' => 'error'])
+        @include('components.popupmessage', ['message' => $message, 'class' => 'error'])
         <button type="submit">Logint</button>
     @elseif ($msg === 'warning')
         @include('components.popupmessage', ['message' => 'User already exists', 'class' => 'warning'])
